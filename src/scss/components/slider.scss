@@ -1,0 +1,127 @@
+.slide-bg{
+  background: linear-gradient(0deg, rgba(212, 227, 236, 0.30) -2.6%, rgba(247, 249, 251, 0.30) 100%);
+}
+.slider-container {
+  position: relative;
+  .slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    .slide {
+      flex-shrink: 0;
+      width: 100%;
+      height: 545px;
+      display: none;
+      &.active {
+        display: block;
+      }
+      .slide-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 15px;
+        &__item{
+          h2{
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            color: #333;
+            margin-bottom: 30px;
+          }
+          p{
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 130%;
+            color: #333;
+            span{
+              display: block;
+            }
+          }
+          h4{
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: 0.24px;
+            color: #333;
+            margin: 10px 0 20px 0;
+          }
+          a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 45px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            color: #ffffff;
+            border-radius: 5px;
+            background-color: #859BA6;
+            margin-top: 30px;
+          }
+          .slide-about{
+            color: #859BA6;
+            border-radius: 5px;
+            border: 2px solid #859BA6;
+            background-color: transparent;
+            margin-top: 0;
+          }
+        }
+        &__item:nth-child(3){
+          margin-top: 220px;
+        }
+        &__img{
+          max-width: 560px;
+          width: 100%;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .progress-bar {
+    max-width: 1320px;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 15px;
+    margin: 0 auto;
+    .progress-points {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+      margin: 0 -3px;
+    }
+
+    .progress-point {
+      cursor: pointer;
+      flex-grow: 1;
+      height: 100%;
+      background-color: #ffffff;
+      transition: background-color 0.3s;
+      border-radius: 10px;
+      margin: 0 3px;
+      &.active {
+        background-color: #859BA6;
+      }
+      .progress {
+        height: 100%;
+        width: 0;
+        background-color: #859BA6;
+        transition: width .9s;
+      }
+    }
+  }
+}
+
+
+

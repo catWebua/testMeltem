@@ -1,0 +1,15 @@
+.footer {
+  padding: rem(50) 0;
+  background: linear-gradient(0deg, rgba(212, 227, 236, 0.3) -2.6%, rgba(247, 249, 251, 0.3) 100%);
+
+  // .footer__container
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include media-mx(510) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
