@@ -1,10 +1,22 @@
-@media all and (max-width: 1044px) {
+@media all and (max-width: 1335px) {
+  .header__container, .slider-container .slider .slide .slide-container, .slider-container .progress-bar .progress-points{
+    padding: 0 15px;
+  }
+}
+
+@media all and (max-width: 1071px) {
   .header__container .menu__list li {
     margin: 0 10px;
   }
 }
 
 @media all and (max-width: 991px) {
+  .burger-menu{
+    display: block;
+  }
+  .header__container{
+    padding: 0;
+  }
   #popupShow1{
     width: 100px;
     height: 30px;
@@ -49,6 +61,9 @@
 }
 
 @media all and (max-width: 768px) {
+  .cookie-banner{
+    top: 65%;
+  }
   .slider-container .slider .slide{
     height: 516px;
   }

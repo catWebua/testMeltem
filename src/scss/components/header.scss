@@ -15,7 +15,6 @@
     align-items: center;
     justify-content: space-between;
     height: 45px;
-
     .header-is-sticky & {
       height: rem($headerHeight - 50);
     }
@@ -23,7 +22,6 @@
     .menu {
       display: flex;
       align-items: center;
-
       &__list {
         display: flex;
         align-items: center;
@@ -97,6 +95,7 @@
 
 
 .burger-menu {
+  display: none;
   position: relative;
 }
 #burgerButton {
