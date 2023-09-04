@@ -149,31 +149,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//input phone
-const phoneNumberInput = document.getElementById('phoneNumber');
+//form
+const phoneNumberInput = document.getElementById("phoneNumber");
 
-phoneNumberInput.addEventListener('focus', function() {
-    if (!this.value.startsWith('+380')) {
-        this.value = '+380';
+function addPrefixOnClick() {
+    if (!phoneNumberInput.value.startsWith("+380")) {
+        phoneNumberInput.value = "+380" + phoneNumberInput.value;
+        phoneNumberInput.classList.add('error');
+    }
+}
+
+phoneNumberInput.addEventListener("click", addPrefixOnClick);
+
+phoneNumberInput.addEventListener("input", function () {
+    let inputValue = phoneNumberInput.value;
+    let numericValue = inputValue.replace(/[^0-9+]/g, '');
+
+    if (!numericValue.startsWith("+380")) {
+        numericValue = "+380" + numericValue.substr(3);
+    }
+
+    if (numericValue.length === 13) {
+        phoneNumberInput.classList.remove('error');
+    } else {
+        phoneNumberInput.classList.add('error');
+    }
+
+    phoneNumberInput.value = numericValue;
+});
+
+const nameInput = document.getElementById("name");
+nameInput.addEventListener("input", function () {
+    const inputValue2 = nameInput.value;
+
+    if (inputValue2.length > 3) {
+        nameInput.classList.remove('error');
+    } else {
+        nameInput.classList.add('error');
     }
 });
 
-phoneNumberInput.addEventListener('input', function() {
-    let phoneNumber = this.value;
-    phoneNumber = phoneNumber.replace(/[^0-9+]/g, '');
-    if (!phoneNumber.startsWith('+380')) {
-        phoneNumber = '+380';
-    }
-    phoneNumber = phoneNumber.slice(0, 13);
-
-    this.value = phoneNumber;
-
-    // if (phoneNumber.length !== 13) {
-    //     document.getElementById('error').innerText = '';
-    // } else {
-    //     document.getElementById('error').innerText = '';
-    // }
-});
 
 //popup
 document.getElementById("phoneForm").addEventListener("submit", function(event) {

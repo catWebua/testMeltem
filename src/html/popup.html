@@ -12,13 +12,12 @@
                 <h4>Ми зв’яжемося з вами найближчим часом.</h4>
 
                 <form id="phoneForm" class="formStyle">
-                    <input type="text" id="name" placeholder="Ваше ім’я*" required>
+                    <input type="text" id="name" placeholder="Ваше ім’я*" minlength="3" required>
                     <div class="phone-block">
-                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+380-000-00-00*" minlength="13" maxlength="13" required>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+380-00-000-00-00*" minlength="13" maxlength="13" required>
                     </div>
                     <input id="formSend" type="submit" class="buttonForm" value="Відправить">
                 </form>
-
                 <p>Натискаючи кнопку “Надіслати”, ви погоджуєтесь з <a href="#">Правилами обробки персональних даних.</a></p>
             </div>
             <div id="thanksMessage" style="display: none;">
